@@ -1,3 +1,15 @@
+# Description
+#   A Hubot script for dokku
+#
+# Configuration:
+#   HUBOT_DOKKU_SERVER_URL
+#
+# Commands:
+#   hubot dokku help- responds dokku help
+#
+# Author:
+#   yymm <yuya.yano.6260@gmail.com>
+
 server_url = process.env.HUBOT_DOKKU_SERVER_URL
 
 module.exports = (robot) ->
