@@ -10,7 +10,7 @@ module.exports = (robot) ->
     })
     robot.http(server_url)
       .header('Content-Type', 'application/json')
-      .post(data) (err, res, body) ->
+      .post(data) (err, resp, body) ->
         if err
           res.send "#{err}"
         data = JSON.parse body

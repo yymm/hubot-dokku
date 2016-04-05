@@ -2,7 +2,7 @@
   "name": "hubot-dokku",
   "version": "0.1.0",
   "description": "hubot script for dokku",
-  "main": "index.js",
+  "main": "index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
