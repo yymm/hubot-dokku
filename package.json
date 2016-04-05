@@ -1,0 +1,23 @@
+{
+  "name": "hubot-dokku",
+  "version": "0.1.0",
+  "description": "hubot script for dokku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yymm/hubot-dokku.git"
+  },
+  "keywords": [
+    "hubot",
+    "dokku"
+  ],
+  "author": "yymm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yymm/hubot-dokku/issues"
+  },
+  "homepage": "https://github.com/yymm/hubot-dokku#readme"
+}
