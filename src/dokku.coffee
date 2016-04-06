@@ -22,7 +22,7 @@ module.exports = (robot) ->
     cmd = res.message.text.split(" ")[1..]
     for invalid_cmd in invalid_cmds
       if cmd[1] == invalid_cmd
-        res.send "Interactive commands is prohibited. #{invalid_cmds}"
+        res.send "Interactive commands is prohibited: [ #{invalid_cmds} ]"
         return
     data = JSON.stringify({
         cmd: cmd
