@@ -12,13 +12,20 @@
 
 server_url = process.env.HUBOT_DOKKU_SERVER_URL
 
+invalid_cmds = ['apps:destroy', 'enter']
+
 module.exports = (robot) ->
   robot.respond /dokku (?!.*(&|\||>|;)).*/, (res) ->
     unless server_url?
       res.send "Missing HUBOT_DOKKU_SERVER_URL in environment: please set and try again."
       return
+    cmd = res.message.text.split(" ")[1..]
+    for invalid_cmd in invalid_cmds
+      if cmd[1] == invalid_cmd
+        res.send "Interactive commands is prohibited. #{invalid_cmds}"
+        return
     data = JSON.stringify({
-        cmd: res.message.text.split(" ")[1..]
+        cmd: cmd
     })
     robot.http(server_url)
       .header('Content-Type', 'application/json')
